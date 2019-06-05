@@ -1,0 +1,69 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="assets/index.css" >
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
+  <script type="text/javascript" src="assets/d3.layout.clouds.js"></script>
+
+  <script type="text/javascript" src="assets/dataprep.js"></script>
+  <script type="text/javascript" src="assets/topBreedsChart.js"></script>
+  <script type="text/javascript" src="assets/wordCloud.js"></script>
+  <script type="text/javascript" src="assets/dogsByYearChart.js"></script>
+  <script type="text/javascript" src="assets/breedsLineChart.js"></script>
+  <script type="text/javascript" src="assets/main.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+</head>
+<body>
+
+
+<div class="main">
+<h1>Zurich Dogs (2001-2015) Dashboard</h1>
+
+<p id="summary">A quick overview of dogs breeds owned in Zurich over the period 2001-2015. Dashboard developed using D3.js functionalities.<br/>
+  Dataset taken from kaggle repo: <a href="https://www.kaggle.com/kmader/dogs-of-zurich">https://www.kaggle.com/kmader/dogs-of-zurich</a>, file 20151001hundehalter.csv (some data translated to english).<br/>
+  Notice: As the dog birth distribution is not uniform, the popularity line chart could provide misleading downward trends. This behaviour could be erradicated with a more complete dataset.</p>
+
+  <div class="hsection">
+    <div class="graph" id="topics_barchart">
+      <h2>Top 15 dog breeds</h2>
+    </div>
+    <div class="graph" id="wordcloud">
+      <h2>40 most popular breeds</h2>
+    </div>
+    <div class="graph" id="years_barchart">
+      <h2>Dogs born in Zurich by year</h2>
+    </div>
+  </div>
+
+  <div class="hsection">
+    <div class="graph">
+      <h2>Breed popularity evolution by year</h2>
+      <table>
+        <tr>
+          <td>
+            <select id ="sel1" class="selectpicker smallsel" data-live-search="true">
+            </select>
+
+            <select id ="sel2" class="selectpicker smallsel" data-live-search="true">
+            </select>
+
+            <select id ="sel3" class="selectpicker smallsel" data-live-search="true">
+            </select>
+          </td>
+        </tr>
+        <tr id="linechart">
+        </tr>
+    </table>
+    </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
